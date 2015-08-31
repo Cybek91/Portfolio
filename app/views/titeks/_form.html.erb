@@ -1,0 +1,17 @@
+<%= form_for(@titek) do |f| %>
+  <% if @titek.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@titek.errors.count, "error") %> prohibited this titek from being saved:</h2>
+
+      <ul>
+      <% @titek.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
